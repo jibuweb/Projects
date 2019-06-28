@@ -1,14 +1,26 @@
 <h2>Products list</h2>
-<ul>
-  <li class="product-base" *ngFor= 'let product of products.productItems'>    
-    <img class="picSize" src="{{product.img}}" alt="" >
-    <div class="prodName">{{product.name}}</div>
-    <div class="price">Rs {{product.price}}</div>
-    <!-- <div class="size">{{product.size[0].size}}</div> -->
 
-  </li>
-  
-  
-  <!-- <pre>{{products|json}}</pre> -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12 product-base" *ngFor='let product of products.productItems'>
+            <img class="picSize" [src]="product.img" alt="">
+            <div class="prodName">{{product.name}}</div>
 
-</ul>
+            <div class="clearfix rating marT8 " rating="4.5" noofratings="2">
+                <div class="rating-stars ">
+                    <div class="grey-stars"></div>
+                    <div class="filled-stars" style="width:90%"></div>
+                </div>
+            </div>
+
+            <div class="product_price">
+                <div class="lfloat marR10 marB5">
+                    <span class="discount-price strike">Rs 1,999</span> <span class="mrp">Rs 651</span>
+                </div>
+                <div class="product_disc"> 67% OFF </div>
+            </div>
+            <div class="price">Rs {{product.price}}</div>
+            <!-- <div class="size">{{product.size[0].size}}</div> -->
+        </div>
+    </div>
+</div>
