@@ -2,10 +2,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12 product-base" *ngFor='let product of products.productItems'>
+        <div class="col-md-3 col-sm-3 col-lg-3 col-xs-12 product-base" *ngFor='let product of products.productItems; index as productId '>
             <img class="picSize" [src]="product.img" alt="">
-            <div class="prodName">{{product.name}}</div>
-
+            <div class="prodName"><a [routerLink]="['/products', productId]">{{product.name}}</a></div>
+            
             <div class="clearfix rating marT8 " rating="4.5" noofratings="2">
                 <div class="rating-stars ">
                     <div class="grey-stars"></div>

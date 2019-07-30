@@ -5,6 +5,7 @@ import { ProductComponent } from './product/product.component';
 import { MystoreComponent } from './mystore/mystore.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'allproducts', component: ProductComponent},
   {path: 'mystore', component: MystoreComponent},
   {path: 'contactUs', component: ContactusComponent},
+  {path: 'products/:productId', component: ProductDetailsComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -25,5 +27,6 @@ export const routingComponents = [
         ProductComponent, 
         MystoreComponent,
         ContactusComponent,
-        PageNotFoundComponent         
+        PageNotFoundComponent,
+        ProductDetailsComponent         
       ]
